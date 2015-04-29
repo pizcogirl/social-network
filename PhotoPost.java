@@ -1,32 +1,34 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class MessagePost here.
+ * Esta clase representa los mensajes publicados en la red social asociados a fotos.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MessagePost
+public class PhotoPost
 {
     private String username;
-    private String message;
+    private String filename;
+    private String caption;
     private long timestamp;
     private int likes;
     private ArrayList<String> comments;
 
     /**
-     * Constructor for objects of class MessagePost
+     * Constructor for objects of class PhotoPost
      */
-    public MessagePost(String autor, String text)
+    public PhotoPost(String autor, String filename, String caption)
     {
         // initialise instance variables
-       this.username = autor;
-       this.message = text;
-       this.timestamp = System.currentTimeMillis();
-       this.likes = 0;
-       comments = new ArrayList<String>();
+        this.username = autor;
+        this.filename = filename;
+        this.caption = caption;
+        this.timestamp = System.currentTimeMillis();
+        this.likes = 0;
+        comments = new ArrayList<String>();
     }
-    
+
     /**
      * Aumenta el contador de likes en uno
      */
@@ -34,7 +36,7 @@ public class MessagePost
     {
         likes++;
     }
-    
+
     /**
      * Desminuye el contador de likes en uno. Si es cero no hace nada
      */
@@ -45,7 +47,7 @@ public class MessagePost
             likes--;
         }
     }
-    
+
     /**
      * Añade un comentario al mensaje
      */
@@ -53,15 +55,23 @@ public class MessagePost
     {
         comments.add(text);
     }
-    
+
     /**
      * Devuelve el texto del mensaje
      */
-    public String getText()
+    public String getImageFile()
     {
-        return message;
+        return filename;
     }
-    
+
+    /**
+     * Devuelve el texto del mensaje
+     */
+    public String getCaption()
+    {
+        return caption;
+    }
+
     /**
      * Devuelve el timestamp del mensaje
      */
@@ -69,14 +79,15 @@ public class MessagePost
     {
         return timestamp;
     }
-    
+
     /**
      * Muestra por pantalla todas las caracteristicas del mensaje
      */
     public void display()
     {
         System.out.println("Autor: " + username);
-        System.out.println("Mensaje: " + message);
+        System.out.println("Mensaje: " + filename);
+        System.out.println(caption);
         System.out.println("Enviado hace " + (timeString(System.currentTimeMillis())));
         System.out.println(likes + " me gusta");
         if(comments.size() > 0){
