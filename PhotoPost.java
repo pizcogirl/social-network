@@ -17,6 +17,9 @@ public class PhotoPost
 
     /**
      * Constructor for objects of class PhotoPost
+     * @param autor el autor del mensaje
+     * @param filename el nombre del archivo de la foto
+     * @param caption el texto que acompaña a la foto
      */
     public PhotoPost(String autor, String filename, String caption)
     {
@@ -50,6 +53,7 @@ public class PhotoPost
 
     /**
      * Añade un comentario al mensaje
+     * @param text el comentario a añadir al mensaje
      */
     public void addComment(String text)
     {
@@ -58,6 +62,7 @@ public class PhotoPost
 
     /**
      * Devuelve el texto del mensaje
+     * @return el nombre del archivo de la foto
      */
     public String getImageFile()
     {
@@ -66,6 +71,7 @@ public class PhotoPost
 
     /**
      * Devuelve el texto del mensaje
+     * @return el texto que acompaña a la foto
      */
     public String getCaption()
     {
@@ -74,6 +80,7 @@ public class PhotoPost
 
     /**
      * Devuelve el timestamp del mensaje
+     * @return el timestamp del mensaje
      */
     public long getTimestamp()
     {

@@ -16,6 +16,8 @@ public class MessagePost
 
     /**
      * Constructor for objects of class MessagePost
+     * @param autor el autor del mensaje
+     * @param text el texto del mensaje
      */
     public MessagePost(String autor, String text)
     {
@@ -48,6 +50,7 @@ public class MessagePost
     
     /**
      * Añade un comentario al mensaje
+     * @param text el comentario a añadir
      */
     public void addComment(String text)
     {
@@ -56,6 +59,7 @@ public class MessagePost
     
     /**
      * Devuelve el texto del mensaje
+     * @return el texto del mensaje
      */
     public String getText()
     {
@@ -64,6 +68,7 @@ public class MessagePost
     
     /**
      * Devuelve el timestamp del mensaje
+     * @return el timestamp del mensaje
      */
     public long getTimestamp()
     {
