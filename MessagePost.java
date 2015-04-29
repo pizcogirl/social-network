@@ -100,7 +100,8 @@ public class MessagePost
     private String timeString(long time)
     {
         long tiempo = (time - timestamp);
-        int segundos = (int)(time/1000);
+        int segundos = (int)(tiempo/1000);
+        System.out.println(segundos);
         int minutos = (segundos/60);
         segundos -= minutos*60;
         String texto = minutos + " minutos y " + segundos + " segundos";
